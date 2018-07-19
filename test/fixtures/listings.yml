@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national: MyString
+  bogo: MyString
+  japanese: MyString
+  gengo: MyString
+  lesson_style: MyString
+  place: MyString
+  price_normal: 1
+  price_first: 1
+  listing_content: MyText
+  active: false
+  user_id: 
+
+two:
+  national: MyString
+  bogo: MyString
+  japanese: MyString
+  gengo: MyString
+  lesson_style: MyString
+  place: MyString
+  price_normal: 1
+  price_first: 1
+  listing_content: MyText
+  active: false
+  user_id: 

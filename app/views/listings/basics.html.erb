@@ -1,0 +1,65 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+    <div class="col-md-3">
+        <!-- vertical-navbar -->
+        <%= render 'partial/verticalnavbar'%>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <div class="text-center">
+                  <span style="font-size:24px;">基本データの編集</span>
+              </div>
+          </div>
+
+          <div class="panel-body">           
+              <%= form_for @listing do |f| %>
+                  <div class="row">
+              <div class="col-md-12 select">
+                <div class="form-group">
+                  <label>国籍</label>
+                  <%= f.select :national, [["中国","中国"], ["日本","日本"], ["台湾","台湾"], ["シンガポール","シンガポール"], ["香港","香港"],["マカオ","マカオ"], ["マレーシア","マレーシア"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <div class="col-md-12 select">
+                <div class="form-group">
+                  <label>母語</label>
+                  <%= f.select :bogo, [["中国語(北京語)","中国語(北京語)"],["中国語(北京語 台湾)","中国語(北京語 台湾)"], ["中国語(広東語)","中国語(広東語)"], ["日本語","日本語"], ["英語","英語"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                </div>
+              </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+              <div class="col-md-12 select">
+                <div class="form-group">
+                  <label>日本語能力</label>
+                  <%= f.select :japanese, [["ネイティブ","ネイティブ"], ["流暢","流暢"], ["日常会話レベル","日常会話レベル"], ["得意ではない","得意ではない"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <div class="col-md-12 select">
+                <div class="form-group">
+                  <label>レッスン可能言語</label>
+                  <%= f.select :gengo,[["中国語(北京語)","中国語(北京語)"],["中国語(北京語 台湾)","中国語(北京語 台湾)"], ["中国語(広東語)","中国語(広東語)"], ["日本語","日本語"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                </div>
+              </div>
+            </div>
+                  <br>
+
+                  <div class="actions">
+                      <%= f.submit "更新", class: "btn btn-danger" %>
+                  </div>
+              <% end %>
+          </div>
+      </div>
+  </div>
+</div>
